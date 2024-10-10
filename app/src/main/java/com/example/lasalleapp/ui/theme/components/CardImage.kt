@@ -36,6 +36,7 @@ fun CardImage(news : News, onClick : (News)->Unit){
     }
 }
 
+
 @Preview
 @Composable
 fun CardImagePreview(){

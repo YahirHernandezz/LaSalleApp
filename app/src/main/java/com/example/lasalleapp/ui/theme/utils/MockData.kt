@@ -8,6 +8,8 @@ import androidx.compose.material.icons.filled.Settings
 import com.example.lasalleapp.models.BottomNavigationItem
 import com.example.lasalleapp.models.Community
 import com.example.lasalleapp.models.News
+import com.example.lasalleapp.models.Settings
+import com.example.lasalleapp.ui.theme.utils.Screens
 
 val newsList = listOf(
     News(
@@ -60,3 +62,12 @@ val communities = listOf(
     Community(4,"https://www.lasallebajio.edu.mx/comunidad/images/tile_tramites.jpg"),
     Community(5,"https://www.lasallebajio.edu.mx/comunidad/images/tile_blog.jpg"),
     )
+
+val settingsList = listOf(
+    Settings(
+        name = "Jared Yahir Herńandez Delgado",
+        date = "16/02/2023",
+        mail = "yahir16hdz@gmail.com",
+        image = "https://pbs.twimg.com/profile_images/1066477945076752384/6cgqAOkb_400x400.jpg"
+    )
+)
