@@ -36,8 +36,8 @@ fun SettingsScreen(innerPadding : PaddingValues, navController: NavController){
         ){
             AsyncImage(
                 model = ImageRequest.Builder(LocalContext.current)
-                    .placeholder(R.drawable.profile_picture)
-                    .data(R.drawable.profile_picture)
+                    .placeholder(R.drawable.dua)
+                    .data(R.drawable.dua)
                     .build(),
                 contentDescription = "Selene Delgado",
                 modifier = Modifier.size(100.dp).clip(RoundedCornerShape(50)),
