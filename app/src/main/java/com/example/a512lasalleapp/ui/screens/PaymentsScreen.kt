@@ -9,6 +9,7 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.lazy.items
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -22,6 +23,17 @@ import com.example.a512lasalleapp.ui.theme._512LaSalleAppTheme
 
 @Composable
 fun PaymentsScreen(innerPadding: PaddingValues){
+    val pagados = listOf(
+        "Agosto",
+        "Septiembre",
+        "Octubre"
+    )
+
+    val pendientes = listOf(
+        "Noviembre",
+        "Diciembre",
+        "Enero"
+    )
     ScreenTemplate(innerPadding = innerPadding, header = {
         Box(
             modifier = Modifier.fillMaxSize(),
@@ -60,8 +72,8 @@ fun PaymentsScreen(innerPadding: PaddingValues){
                     .padding(top = 10.dp)
                     .height(200.dp)
             ){
-                items(3){
-                    PaymentItem(text = "Noviembre", false)
+                items(pendientes){
+                    PaymentItem(pendientes[pendientes.indexOf(it)], false)
                 }
             }
 
@@ -76,8 +88,8 @@ fun PaymentsScreen(innerPadding: PaddingValues){
                     .padding(top = 10.dp)
                     .height(200.dp)
             ){
-                items(3){
-                    PaymentItem(text = "Noviembre", true)
+                items(pagados){
+                    PaymentItem(pagados[pagados.indexOf(it)], true)
                 }
             }
         }

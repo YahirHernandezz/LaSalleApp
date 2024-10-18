@@ -31,13 +31,13 @@ import com.example.a512lasalleapp.ui.theme._512LaSalleAppTheme
 @Composable
 fun GradesScreen(innerPadding: PaddingValues, navController: NavController) {
     val materias = listOf(
-        "Android",
-        "Programacion",
+        "Taller Desarrollo Android",
+        "Administración de proyectos",
         "Base de Datos",
-        "Programacion",
-        "IA",
-        "Algoritmos",
-        "Matematicas"
+        "Modelado imágenes",
+        "Redes de Área Local",
+        "Modelos Abstractos",
+        "Metolodología de Investigación"
     )
     ScreenTemplate(innerPadding = innerPadding, header = {
         Row (

@@ -39,7 +39,7 @@ fun SettingsScreen(innerPadding : PaddingValues, navController: NavController){
                     .placeholder(R.drawable.dua)
                     .data(R.drawable.dua)
                     .build(),
-                contentDescription = "Selene Delgado",
+                contentDescription = "LaSallista",
                 modifier = Modifier.size(100.dp).clip(RoundedCornerShape(50)),
                 contentScale = ContentScale.Crop
             )
