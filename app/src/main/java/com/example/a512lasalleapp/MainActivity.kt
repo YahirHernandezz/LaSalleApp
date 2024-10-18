@@ -135,7 +135,7 @@ class MainActivity : ComponentActivity() {
                             ThemeScreen(innerPadding = innerPadding)
                         }
                         composable(route = Screens.ClassDetail.route) {
-                            ClassDetailScreen(innerPadding = innerPadding)
+                            ClassDetailScreen(innerPadding = innerPadding, "Android")
                         }
                     }
 

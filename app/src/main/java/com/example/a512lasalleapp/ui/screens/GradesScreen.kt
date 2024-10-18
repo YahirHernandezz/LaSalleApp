@@ -23,6 +23,7 @@ import androidx.navigation.NavController
 import coil.compose.AsyncImage
 import coil.request.ImageRequest
 import com.example.a512lasalleapp.R
+import com.example.a512lasalleapp.ui.components.ClassItem
 import com.example.a512lasalleapp.ui.components.ScreenTemplate
 import com.example.a512lasalleapp.ui.theme._512LaSalleAppTheme
 
@@ -84,10 +85,10 @@ fun GradesScreen(innerPadding: PaddingValues, navController: NavController) {
         }
     }, body = {
         LazyColumn (
-            modifier = Modifier.height(300.dp).padding(10.dp)
+            modifier = Modifier.height(570.dp).padding(10.dp)
         ){
             items(7) {
-
+                ClassItem("Android", 9.0, onClick = {navController.navigate("class-detail")})
             }
         }
     })
