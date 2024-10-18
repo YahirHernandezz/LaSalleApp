@@ -29,13 +29,13 @@ import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
 import androidx.navigation.navArgument
 import com.example.a512lasalleapp.ui.screens.CalendarScreen
-import com.example.a512lasalleapp.ui.screens.ChangePasswordScreen
-import com.example.a512lasalleapp.ui.screens.ChangeThemeScreen
 import com.example.a512lasalleapp.ui.screens.ClassDetailScreen
 import com.example.a512lasalleapp.ui.screens.GradesScreen
 import com.example.a512lasalleapp.ui.screens.HomeScreen
 import com.example.a512lasalleapp.ui.screens.NewsDetailScreen
+import com.example.a512lasalleapp.ui.screens.PasswordScreen
 import com.example.a512lasalleapp.ui.screens.SettingsScreen
+import com.example.a512lasalleapp.ui.screens.ThemeScreen
 import com.example.a512lasalleapp.ui.theme._512LaSalleAppTheme
 import com.example.a512lasalleapp.ui.utils.Screens
 import com.example.a512lasalleapp.ui.utils.bottomNavBarItems
@@ -128,11 +128,11 @@ class MainActivity : ComponentActivity() {
                             val id = it.arguments?.getInt("id",0) ?: 0
                             NewsDetailScreen(newsId=id,innerPadding = innerPadding)
                         }
-                        composable(route = Screens.ChangePassword.route) {
-                            ChangePasswordScreen(innerPadding = innerPadding)
+                        composable(route = Screens.Password.route) {
+                            PasswordScreen(innerPadding = innerPadding)
                         }
-                        composable(route = Screens.ChangeTheme.route) {
-                            ChangeThemeScreen(innerPadding = innerPadding)
+                        composable(route = Screens.Theme.route) {
+                            ThemeScreen(innerPadding = innerPadding)
                         }
                         composable(route = Screens.ClassDetail.route) {
                             ClassDetailScreen(innerPadding = innerPadding)

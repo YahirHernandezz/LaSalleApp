@@ -187,13 +187,13 @@ public val Cash: ImageVector
 
 private var _Cash: ImageVector? = null
 
-public val Password_2: ImageVector
+public val Lock: ImageVector
     get() {
-        if (_Password_2 != null) {
-            return _Password_2!!
+        if (_Lock != null) {
+            return _Lock!!
         }
-        _Password_2 = ImageVector.Builder(
-            name = "Password_2",
+        _Lock = ImageVector.Builder(
+            name = "Lock",
             defaultWidth = 24.dp,
             defaultHeight = 24.dp,
             viewportWidth = 960f,
@@ -210,191 +210,144 @@ public val Password_2: ImageVector
                 strokeLineMiter = 1.0f,
                 pathFillType = PathFillType.NonZero
             ) {
-                moveTo(160f, 520f)
-                quadToRelative(-50f, 0f, -85f, -35f)
-                reflectiveQuadToRelative(-35f, -85f)
-                reflectiveQuadToRelative(35f, -85f)
-                reflectiveQuadToRelative(85f, -35f)
-                reflectiveQuadToRelative(85f, 35f)
-                reflectiveQuadToRelative(35f, 85f)
-                reflectiveQuadToRelative(-35f, 85f)
-                reflectiveQuadToRelative(-85f, 35f)
-                moveTo(80f, 760f)
+                moveTo(240f, 880f)
+                quadToRelative(-33f, 0f, -56.5f, -23.5f)
+                reflectiveQuadTo(160f, 800f)
+                verticalLineToRelative(-400f)
+                quadToRelative(0f, -33f, 23.5f, -56.5f)
+                reflectiveQuadTo(240f, 320f)
+                horizontalLineToRelative(40f)
                 verticalLineToRelative(-80f)
-                horizontalLineToRelative(800f)
+                quadToRelative(0f, -83f, 58.5f, -141.5f)
+                reflectiveQuadTo(480f, 40f)
+                reflectiveQuadToRelative(141.5f, 58.5f)
+                reflectiveQuadTo(680f, 240f)
+                verticalLineToRelative(80f)
+                horizontalLineToRelative(40f)
+                quadToRelative(33f, 0f, 56.5f, 23.5f)
+                reflectiveQuadTo(800f, 400f)
+                verticalLineToRelative(400f)
+                quadToRelative(0f, 33f, -23.5f, 56.5f)
+                reflectiveQuadTo(720f, 880f)
+                close()
+                moveToRelative(0f, -80f)
+                horizontalLineToRelative(480f)
+                verticalLineToRelative(-400f)
+                horizontalLineTo(240f)
+                close()
+                moveToRelative(240f, -120f)
+                quadToRelative(33f, 0f, 56.5f, -23.5f)
+                reflectiveQuadTo(560f, 600f)
+                reflectiveQuadToRelative(-23.5f, -56.5f)
+                reflectiveQuadTo(480f, 520f)
+                reflectiveQuadToRelative(-56.5f, 23.5f)
+                reflectiveQuadTo(400f, 600f)
+                reflectiveQuadToRelative(23.5f, 56.5f)
+                reflectiveQuadTo(480f, 680f)
+                moveTo(360f, 320f)
+                horizontalLineToRelative(240f)
+                verticalLineToRelative(-80f)
+                quadToRelative(0f, -50f, -35f, -85f)
+                reflectiveQuadToRelative(-85f, -35f)
+                reflectiveQuadToRelative(-85f, 35f)
+                reflectiveQuadToRelative(-35f, 85f)
+                close()
+                moveTo(240f, 800f)
+                verticalLineToRelative(-400f)
+                close()
+            }
+        }.build()
+        return _Lock!!
+    }
+
+private var _Lock: ImageVector? = null
+
+public val Sunny: ImageVector
+    get() {
+        if (_Sunny != null) {
+            return _Sunny!!
+        }
+        _Sunny = ImageVector.Builder(
+            name = "Sunny",
+            defaultWidth = 24.dp,
+            defaultHeight = 24.dp,
+            viewportWidth = 960f,
+            viewportHeight = 960f
+        ).apply {
+            path(
+                fill = SolidColor(Color.Black),
+                fillAlpha = 1.0f,
+                stroke = null,
+                strokeAlpha = 1.0f,
+                strokeLineWidth = 1.0f,
+                strokeLineCap = StrokeCap.Butt,
+                strokeLineJoin = StrokeJoin.Miter,
+                strokeLineMiter = 1.0f,
+                pathFillType = PathFillType.NonZero
+            ) {
+                moveTo(440f, 200f)
+                verticalLineToRelative(-160f)
+                horizontalLineToRelative(80f)
+                verticalLineToRelative(160f)
+                close()
+                moveToRelative(266f, 110f)
+                lineToRelative(-55f, -55f)
+                lineToRelative(112f, -115f)
+                lineToRelative(56f, 57f)
+                close()
+                moveToRelative(54f, 210f)
+                verticalLineToRelative(-80f)
+                horizontalLineToRelative(160f)
                 verticalLineToRelative(80f)
                 close()
-                moveToRelative(400f, -240f)
-                quadToRelative(-50f, 0f, -85f, -35f)
-                reflectiveQuadToRelative(-35f, -85f)
-                reflectiveQuadToRelative(35f, -85f)
-                reflectiveQuadToRelative(85f, -35f)
-                reflectiveQuadToRelative(85f, 35f)
-                reflectiveQuadToRelative(35f, 85f)
-                reflectiveQuadToRelative(-35f, 85f)
-                reflectiveQuadToRelative(-85f, 35f)
-                moveToRelative(320f, 0f)
-                quadToRelative(-50f, 0f, -85f, -35f)
-                reflectiveQuadToRelative(-35f, -85f)
-                reflectiveQuadToRelative(35f, -85f)
-                reflectiveQuadToRelative(85f, -35f)
-                reflectiveQuadToRelative(85f, 35f)
-                reflectiveQuadToRelative(35f, 85f)
-                reflectiveQuadToRelative(-35f, 85f)
-                reflectiveQuadToRelative(-85f, 35f)
-            }
-        }.build()
-        return _Password_2!!
-    }
-
-private var _Password_2: ImageVector? = null
-
-public val Dark_mode: ImageVector
-    get() {
-        if (_Dark_mode != null) {
-            return _Dark_mode!!
-        }
-        _Dark_mode = ImageVector.Builder(
-            name = "Dark_mode",
-            defaultWidth = 24.dp,
-            defaultHeight = 24.dp,
-            viewportWidth = 960f,
-            viewportHeight = 960f
-        ).apply {
-            path(
-                fill = SolidColor(Color.Black),
-                fillAlpha = 1.0f,
-                stroke = null,
-                strokeAlpha = 1.0f,
-                strokeLineWidth = 1.0f,
-                strokeLineCap = StrokeCap.Butt,
-                strokeLineJoin = StrokeJoin.Miter,
-                strokeLineMiter = 1.0f,
-                pathFillType = PathFillType.NonZero
-            ) {
-                moveTo(480f, 840f)
-                quadToRelative(-150f, 0f, -255f, -105f)
-                reflectiveQuadTo(120f, 480f)
-                reflectiveQuadToRelative(105f, -255f)
-                reflectiveQuadToRelative(255f, -105f)
-                quadToRelative(14f, 0f, 27.5f, 1f)
-                reflectiveQuadToRelative(26.5f, 3f)
-                quadToRelative(-41f, 29f, -65.5f, 75.5f)
-                reflectiveQuadTo(444f, 300f)
-                quadToRelative(0f, 90f, 63f, 153f)
-                reflectiveQuadToRelative(153f, 63f)
-                quadToRelative(55f, 0f, 101f, -24.5f)
-                reflectiveQuadToRelative(75f, -65.5f)
-                quadToRelative(2f, 13f, 3f, 26.5f)
-                reflectiveQuadToRelative(1f, 27.5f)
-                quadToRelative(0f, 150f, -105f, 255f)
-                reflectiveQuadTo(480f, 840f)
+                moveTo(440f, 920f)
+                verticalLineToRelative(-160f)
+                horizontalLineToRelative(80f)
+                verticalLineToRelative(160f)
+                close()
+                moveTo(254f, 308f)
+                lineTo(140f, 197f)
+                lineToRelative(57f, -56f)
+                lineToRelative(113f, 113f)
+                close()
+                moveToRelative(508f, 512f)
+                lineTo(651f, 705f)
+                lineToRelative(54f, -54f)
+                lineToRelative(114f, 110f)
+                close()
+                moveTo(40f, 520f)
+                verticalLineToRelative(-80f)
+                horizontalLineToRelative(160f)
+                verticalLineToRelative(80f)
+                close()
+                moveToRelative(157f, 300f)
+                lineToRelative(-56f, -57f)
+                lineToRelative(112f, -112f)
+                lineToRelative(29f, 27f)
+                lineToRelative(29f, 28f)
+                close()
+                moveToRelative(283f, -100f)
+                quadToRelative(-100f, 0f, -170f, -70f)
+                reflectiveQuadToRelative(-70f, -170f)
+                reflectiveQuadToRelative(70f, -170f)
+                reflectiveQuadToRelative(170f, -70f)
+                reflectiveQuadToRelative(170f, 70f)
+                reflectiveQuadToRelative(70f, 170f)
+                reflectiveQuadToRelative(-70f, 170f)
+                reflectiveQuadToRelative(-170f, 70f)
                 moveToRelative(0f, -80f)
-                quadToRelative(88f, 0f, 158f, -48.5f)
-                reflectiveQuadTo(740f, 585f)
-                quadToRelative(-20f, 5f, -40f, 8f)
-                reflectiveQuadToRelative(-40f, 3f)
-                quadToRelative(-123f, 0f, -209.5f, -86.5f)
-                reflectiveQuadTo(364f, 300f)
-                quadToRelative(0f, -20f, 3f, -40f)
-                reflectiveQuadToRelative(8f, -40f)
-                quadToRelative(-78f, 32f, -126.5f, 102f)
-                reflectiveQuadTo(200f, 480f)
-                quadToRelative(0f, 116f, 82f, 198f)
-                reflectiveQuadToRelative(198f, 82f)
-                moveToRelative(-10f, -270f)
+                quadToRelative(66f, 0f, 113f, -47f)
+                reflectiveQuadToRelative(47f, -113f)
+                reflectiveQuadToRelative(-47f, -113f)
+                reflectiveQuadToRelative(-113f, -47f)
+                reflectiveQuadToRelative(-113f, 47f)
+                reflectiveQuadToRelative(-47f, 113f)
+                reflectiveQuadToRelative(47f, 113f)
+                reflectiveQuadToRelative(113f, 47f)
+                moveToRelative(0f, -160f)
             }
         }.build()
-        return _Dark_mode!!
+        return _Sunny!!
     }
 
-private var _Dark_mode: ImageVector? = null
-
-public val Check: ImageVector
-    get() {
-        if (_Check != null) {
-            return _Check!!
-        }
-        _Check = ImageVector.Builder(
-            name = "Check",
-            defaultWidth = 24.dp,
-            defaultHeight = 24.dp,
-            viewportWidth = 960f,
-            viewportHeight = 960f
-        ).apply {
-            path(
-                fill = SolidColor(Color.Black),
-                fillAlpha = 1.0f,
-                stroke = null,
-                strokeAlpha = 1.0f,
-                strokeLineWidth = 1.0f,
-                strokeLineCap = StrokeCap.Butt,
-                strokeLineJoin = StrokeJoin.Miter,
-                strokeLineMiter = 1.0f,
-                pathFillType = PathFillType.NonZero
-            ) {
-                moveTo(382f, 720f)
-                lineTo(154f, 492f)
-                lineToRelative(57f, -57f)
-                lineToRelative(171f, 171f)
-                lineToRelative(367f, -367f)
-                lineToRelative(57f, 57f)
-                close()
-            }
-        }.build()
-        return _Check!!
-    }
-
-private var _Check: ImageVector? = null
-
-public val Cross1: ImageVector
-    get() {
-        if (_Cross1 != null) {
-            return _Cross1!!
-        }
-        _Cross1 = ImageVector.Builder(
-            name = "Cross1",
-            defaultWidth = 15.dp,
-            defaultHeight = 15.dp,
-            viewportWidth = 15f,
-            viewportHeight = 15f
-        ).apply {
-            path(
-                fill = SolidColor(Color(0xFF000000)),
-                fillAlpha = 1.0f,
-                stroke = null,
-                strokeAlpha = 1.0f,
-                strokeLineWidth = 1.0f,
-                strokeLineCap = StrokeCap.Butt,
-                strokeLineJoin = StrokeJoin.Miter,
-                strokeLineMiter = 1.0f,
-                pathFillType = PathFillType.EvenOdd
-            ) {
-                moveTo(12.8536f, 2.85355f)
-                curveTo(13.0488f, 2.6583f, 13.0488f, 2.3417f, 12.8536f, 2.1465f)
-                curveTo(12.6583f, 1.9512f, 12.3417f, 1.9512f, 12.1464f, 2.1465f)
-                lineTo(7.5f, 6.79289f)
-                lineTo(2.85355f, 2.14645f)
-                curveTo(2.6583f, 1.9512f, 2.3417f, 1.9512f, 2.1465f, 2.1465f)
-                curveTo(1.9512f, 2.3417f, 1.9512f, 2.6583f, 2.1465f, 2.8535f)
-                lineTo(6.79289f, 7.5f)
-                lineTo(2.14645f, 12.1464f)
-                curveTo(1.9512f, 12.3417f, 1.9512f, 12.6583f, 2.1465f, 12.8536f)
-                curveTo(2.3417f, 13.0488f, 2.6583f, 13.0488f, 2.8535f, 12.8536f)
-                lineTo(7.5f, 8.20711f)
-                lineTo(12.1464f, 12.8536f)
-                curveTo(12.3417f, 13.0488f, 12.6583f, 13.0488f, 12.8536f, 12.8536f)
-                curveTo(13.0488f, 12.6583f, 13.0488f, 12.3417f, 12.8536f, 12.1464f)
-                lineTo(8.20711f, 7.5f)
-                lineTo(12.8536f, 2.85355f)
-                close()
-            }
-        }.build()
-        return _Cross1!!
-    }
-
-private var _Cross1: ImageVector? = null
-
-
-
-
+private var _Sunny: ImageVector? = null

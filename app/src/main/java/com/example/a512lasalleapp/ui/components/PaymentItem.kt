@@ -1,13 +1,8 @@
 package com.example.a512lasalleapp.ui.components
 
 import androidx.compose.foundation.background
-import androidx.compose.foundation.clickable
-import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.Row
-import androidx.compose.foundation.layout.fillMaxWidth
-import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Icon
@@ -21,8 +16,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.example.a512lasalleapp.ui.theme.GrayLight
 import com.example.a512lasalleapp.ui.theme._512LaSalleAppTheme
-import com.example.a512lasalleapp.ui.utils.Check
-import com.example.a512lasalleapp.ui.utils.Cross1
+import com.example.a512lasalleapp.ui.utils.Lock
 
 @Composable
 fun PaymentItem(text: String, paid: Boolean){
@@ -38,14 +32,14 @@ fun PaymentItem(text: String, paid: Boolean){
         ) {
             if (paid == true){
                 Icon(
-                    imageVector = Check,
+                    imageVector = Lock,
                     contentDescription = text,
                     modifier = Modifier.size(40.dp),
                     tint = MaterialTheme.colorScheme.primary
                 )
             }else{
                 Icon(
-                    imageVector = Cross1,
+                    imageVector = Lock,
                     contentDescription = text,
                     modifier = Modifier.size(40.dp),
                     tint = MaterialTheme.colorScheme.primary

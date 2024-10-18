@@ -3,7 +3,6 @@ package com.example.a512lasalleapp.ui.screens
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Row
-import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
@@ -11,6 +10,7 @@ import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
@@ -22,17 +22,17 @@ import androidx.navigation.NavController
 import coil.compose.AsyncImage
 import coil.request.ImageRequest
 import com.example.a512lasalleapp.R
+import com.example.a512lasalleapp.ui.components.ColumnItem
 import com.example.a512lasalleapp.ui.components.ScreenTemplate
-import com.example.a512lasalleapp.ui.components.Widget
 import com.example.a512lasalleapp.ui.theme._512LaSalleAppTheme
-import com.example.a512lasalleapp.ui.utils.Dark_mode
-import com.example.a512lasalleapp.ui.utils.Password_2
+import com.example.a512lasalleapp.ui.utils.Lock
+import com.example.a512lasalleapp.ui.utils.Sunny
 
 @Composable
 fun SettingsScreen(innerPadding : PaddingValues, navController: NavController){
     ScreenTemplate(innerPadding = innerPadding, header = {
         Row(
-            modifier = Modifier.fillMaxSize().padding(20.dp)
+            modifier = Modifier.fillMaxWidth().padding(20.dp)
         ){
             AsyncImage(
                 model = ImageRequest.Builder(LocalContext.current)
@@ -46,28 +46,28 @@ fun SettingsScreen(innerPadding : PaddingValues, navController: NavController){
             Column (
                 modifier = Modifier.padding(start = 15.dp)
             ){
-                Text(text = "Ronaldo Nunez Laguna",
+                Text(text = "Dua Lipa",
                     fontSize = MaterialTheme.typography.titleLarge.fontSize,
                     fontWeight = MaterialTheme.typography.titleMedium.fontWeight,
                     color = Color.White,
                     modifier = Modifier.padding(bottom = 5.dp))
-                Text(text = "Fecha de Nacimiento: 10 - 17 - 2004",
+                Text(text = "drl77000@lasallebajio.edu.mx",
                     fontSize = MaterialTheme.typography.bodySmall.fontSize,
                     fontWeight = MaterialTheme.typography.bodySmall.fontWeight,
                     color = Color.White)
-                Text(text = "rnl77016@lasallebajio.edu.mx",
+                Text(text = "22 - 08 - 1995",
                     fontSize = MaterialTheme.typography.bodySmall.fontSize,
                     fontWeight = MaterialTheme.typography.bodySmall.fontWeight,
                     color = Color.White)
             }
         }
     }, body = {
-        Row (
+        Column (
             modifier = Modifier.fillMaxWidth().padding(15.dp),
-            horizontalArrangement = androidx.compose.foundation.layout.Arrangement.SpaceEvenly
+            horizontalAlignment = Alignment.CenterHorizontally,
         ){
-            Widget(Password_2, "Cambiar Contraseña", onClick = {navController.navigate("change-password")})
-            Widget(Dark_mode, "Cambiar Tema", onClick = {navController.navigate("change-theme")})
+            ColumnItem("Cambiar Contraseña",Lock, onClick = {navController.navigate("password")})
+            ColumnItem("Cambiar Tema", Sunny, onClick = {navController.navigate("theme")})
         }
     })
 }
