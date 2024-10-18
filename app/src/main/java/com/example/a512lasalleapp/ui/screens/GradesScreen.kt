@@ -8,6 +8,7 @@ import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
@@ -29,6 +30,15 @@ import com.example.a512lasalleapp.ui.theme._512LaSalleAppTheme
 
 @Composable
 fun GradesScreen(innerPadding: PaddingValues, navController: NavController) {
+    val materias = listOf(
+        "Android",
+        "Programacion",
+        "Base de Datos",
+        "Programacion",
+        "IA",
+        "Algoritmos",
+        "Matematicas"
+    )
     ScreenTemplate(innerPadding = innerPadding, header = {
         Row (
             modifier = Modifier
@@ -75,7 +85,7 @@ fun GradesScreen(innerPadding: PaddingValues, navController: NavController) {
                             fontSize = MaterialTheme.typography.bodySmall.fontSize,
                             fontWeight = MaterialTheme.typography.bodySmall.fontWeight,
                             color = Color.White)
-                        Text(text = "9.0",
+                        Text(text = "10",
                             fontSize = MaterialTheme.typography.bodySmall.fontSize,
                             fontWeight = MaterialTheme.typography.bodySmall.fontWeight,
                             color = Color.White)
@@ -87,8 +97,8 @@ fun GradesScreen(innerPadding: PaddingValues, navController: NavController) {
         LazyColumn (
             modifier = Modifier.height(570.dp).padding(10.dp)
         ){
-            items(7) {
-                ClassItem("Android", 9.0, onClick = {navController.navigate("class-detail")})
+            items(materias) {
+                ClassItem(materias[materias.indexOf(it)], 10.0, onClick = {navController.navigate("class-detail/${materias[materias.indexOf(it)]}")})
             }
         }
     })

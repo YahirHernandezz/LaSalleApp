@@ -135,8 +135,12 @@ class MainActivity : ComponentActivity() {
                         composable(route = Screens.Theme.route) {
                             ThemeScreen(innerPadding = innerPadding)
                         }
-                        composable(route = Screens.ClassDetail.route) {
-                            ClassDetailScreen(innerPadding = innerPadding, "Android")
+                        composable(
+                            route = "class-detail/{nombreClase}",
+                            arguments = listOf(navArgument("nombreClase") { type = NavType.StringType })
+                        ) { backStackEntry ->
+                            val nombreClase = backStackEntry.arguments?.getString("nombreClase") ?: ""
+                            ClassDetailScreen(innerPadding, nombreClase)
                         }
                         composable(route = Screens.Payments.route) {
                             PaymentsScreen(innerPadding = innerPadding)

@@ -14,11 +14,9 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.example.a512lasalleapp.ui.theme._512LaSalleAppTheme
-import java.util.Stack
 
 @Composable
 fun ClassDetailScreen(innerPadding : PaddingValues, nombreClase : String){
@@ -43,7 +41,7 @@ fun ClassDetailScreen(innerPadding : PaddingValues, nombreClase : String){
                     fontWeight = MaterialTheme.typography.titleMedium.fontWeight,
                     color = MaterialTheme.colorScheme.onPrimary,
                     modifier = Modifier.padding(bottom = 5.dp))
-                Text(text = "9.0",
+                Text(text = "10.0",
                     fontSize = MaterialTheme.typography.titleLarge.fontSize,
                     fontWeight = MaterialTheme.typography.titleMedium.fontWeight,
                     color = MaterialTheme.colorScheme.onPrimary)
@@ -60,7 +58,7 @@ fun ClassDetailScreen(innerPadding : PaddingValues, nombreClase : String){
                     fontWeight = MaterialTheme.typography.titleMedium.fontWeight,
                     color = MaterialTheme.colorScheme.onBackground,
                     modifier = Modifier.padding(start = 20.dp, bottom = 5.dp))
-                Text(text = "9.0",
+                Text(text = "10.0",
                     fontSize = MaterialTheme.typography.titleMedium.fontSize,
                     fontWeight = MaterialTheme.typography.titleMedium.fontWeight,
                     color = MaterialTheme.colorScheme.onBackground,
@@ -78,7 +76,7 @@ fun ClassDetailScreen(innerPadding : PaddingValues, nombreClase : String){
                     fontWeight = MaterialTheme.typography.titleMedium.fontWeight,
                     color = MaterialTheme.colorScheme.onBackground,
                     modifier = Modifier.padding(start = 20.dp, bottom = 5.dp))
-                Text(text = "9.0",
+                Text(text = "10.0",
                     fontSize = MaterialTheme.typography.titleMedium.fontSize,
                     fontWeight = MaterialTheme.typography.titleMedium.fontWeight,
                     color = MaterialTheme.colorScheme.onBackground,
@@ -96,7 +94,7 @@ fun ClassDetailScreen(innerPadding : PaddingValues, nombreClase : String){
                     fontWeight = MaterialTheme.typography.titleMedium.fontWeight,
                     color = MaterialTheme.colorScheme.onBackground,
                     modifier = Modifier.padding(start = 20.dp, bottom = 5.dp))
-                Text(text = "9.0",
+                Text(text = "10.0",
                     fontSize = MaterialTheme.typography.titleMedium.fontSize,
                     fontWeight = MaterialTheme.typography.titleMedium.fontWeight,
                     color = MaterialTheme.colorScheme.onBackground,
