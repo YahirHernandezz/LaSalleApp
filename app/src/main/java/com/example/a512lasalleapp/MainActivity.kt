@@ -34,6 +34,7 @@ import com.example.a512lasalleapp.ui.screens.GradesScreen
 import com.example.a512lasalleapp.ui.screens.HomeScreen
 import com.example.a512lasalleapp.ui.screens.NewsDetailScreen
 import com.example.a512lasalleapp.ui.screens.PasswordScreen
+import com.example.a512lasalleapp.ui.screens.PaymentsScreen
 import com.example.a512lasalleapp.ui.screens.SettingsScreen
 import com.example.a512lasalleapp.ui.screens.ThemeScreen
 import com.example.a512lasalleapp.ui.theme._512LaSalleAppTheme
@@ -137,8 +138,10 @@ class MainActivity : ComponentActivity() {
                         composable(route = Screens.ClassDetail.route) {
                             ClassDetailScreen(innerPadding = innerPadding, "Android")
                         }
+                        composable(route = Screens.Payments.route) {
+                            PaymentsScreen(innerPadding = innerPadding)
+                        }
                     }
-
                 }
             }
         }

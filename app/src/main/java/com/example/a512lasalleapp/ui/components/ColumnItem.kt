@@ -29,18 +29,19 @@ fun ColumnItem(text: String, icon: ImageVector, onClick : () -> Unit = {}){
     ) {
         Row(
             horizontalArrangement = Arrangement.SpaceBetween,
-            modifier = Modifier.fillMaxWidth().padding(10.dp),
+            modifier = Modifier.fillMaxWidth().padding(start = 10.dp, end = 10.dp, top = 20.dp, bottom = 20.dp),
         ) {
             Text(
                 text= text,
                 color = MaterialTheme.colorScheme.primary,
                 style = MaterialTheme.typography.bodySmall,
                 fontWeight = MaterialTheme.typography.bodySmall.fontWeight,
-                modifier = Modifier.padding(start = 20.dp))
+                modifier = Modifier.padding(start = 20.dp),
+                fontSize = MaterialTheme.typography.bodyMedium.fontSize)
             Icon(
                 imageVector = icon,
                 contentDescription = text,
-                modifier = Modifier.size(15.dp),
+                modifier = Modifier.size(20.dp),
                 tint = MaterialTheme.colorScheme.primary)
         }
 

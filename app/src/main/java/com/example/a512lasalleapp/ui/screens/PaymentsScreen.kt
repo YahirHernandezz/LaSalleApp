@@ -1,6 +1,7 @@
 package com.example.a512lasalleapp.ui.screens
 
 import androidx.compose.foundation.background
+import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.fillMaxSize
@@ -16,40 +17,71 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.example.a512lasalleapp.ui.components.PaymentItem
+import com.example.a512lasalleapp.ui.components.ScreenTemplate
 import com.example.a512lasalleapp.ui.theme._512LaSalleAppTheme
 
 @Composable
 fun PaymentsScreen(innerPadding: PaddingValues){
-    Column (
-        modifier = Modifier
-            .fillMaxSize()
-            .padding(innerPadding)
-            .background(MaterialTheme.colorScheme.background)
-    ){
-        Text(text = "Pagos Pendientes",
-            fontSize = MaterialTheme.typography.titleLarge.fontSize,
-            fontWeight = MaterialTheme.typography.titleMedium.fontWeight,
-            color = MaterialTheme.colorScheme.primary,
-            modifier = Modifier.padding(25.dp)
-                .align(androidx.compose.ui.Alignment.CenterHorizontally))
-
-        LazyColumn (
-            modifier = Modifier.fillMaxWidth().height(150.dp)
+    ScreenTemplate(innerPadding = innerPadding, header = {
+        Box(
+            modifier = Modifier.fillMaxSize(),
+            contentAlignment = androidx.compose.ui.Alignment.Center
         ){
-            item(){
-                PaymentItem(text = "Primer Pago", true)
-                PaymentItem(text = "Primer Pago", true)
-                PaymentItem(text = "Primer Pago", true)
+            Column (
+                modifier = Modifier.fillMaxWidth(),
+                horizontalAlignment = androidx.compose.ui.Alignment.CenterHorizontally
+            ){
+                Text(text = "Pagos",
+                    fontSize = MaterialTheme.typography.titleLarge.fontSize,
+                    fontWeight = MaterialTheme.typography.titleMedium.fontWeight,
+                    color = MaterialTheme.colorScheme.onPrimary,
+                    modifier = Modifier.padding(bottom = 15.dp))
+
+                Text(text = "Semestre Ago - Dic",
+                    fontSize = MaterialTheme.typography.titleMedium.fontSize,
+                    fontWeight = MaterialTheme.typography.titleMedium.fontWeight,
+                    color = MaterialTheme.colorScheme.onPrimary)
             }
         }
+    }, body = {
+        Column (
+            modifier = Modifier
+                .fillMaxSize()
+                .padding(10.dp)
+        ){
+            Text(text = "Pagos Pendientes",
+                fontSize = MaterialTheme.typography.titleMedium.fontSize,
+                fontWeight = MaterialTheme.typography.titleMedium.fontWeight,
+                color = MaterialTheme.colorScheme.onBackground,
+                modifier = Modifier.padding(start = 10.dp))
 
-        Text(text = "Pagos Realizados",
-            fontSize = MaterialTheme.typography.titleLarge.fontSize,
-            fontWeight = MaterialTheme.typography.titleMedium.fontWeight,
-            color = MaterialTheme.colorScheme.primary,
-            modifier = Modifier.padding(25.dp)
-                .align(androidx.compose.ui.Alignment.CenterHorizontally))
-    }
+            LazyColumn(
+                modifier = Modifier
+                    .padding(top = 10.dp)
+                    .height(200.dp)
+            ){
+                items(3){
+                    PaymentItem(text = "Noviembre", false)
+                }
+            }
+
+            Text(text = "Pagos Realizados",
+                fontSize = MaterialTheme.typography.titleMedium.fontSize,
+                fontWeight = MaterialTheme.typography.titleMedium.fontWeight,
+                color = MaterialTheme.colorScheme.onBackground,
+                modifier = Modifier.padding(start = 10.dp))
+
+            LazyColumn(
+                modifier = Modifier
+                    .padding(top = 10.dp)
+                    .height(200.dp)
+            ){
+                items(3){
+                    PaymentItem(text = "Noviembre", true)
+                }
+            }
+        }
+    })
 }
 
 @Preview
